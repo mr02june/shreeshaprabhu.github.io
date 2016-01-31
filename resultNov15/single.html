@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Individual Result</title>
+	<link rel="stylesheet" href="styles/bootstrap.min.css" />
+	<link rel="stylesheet" href="styles/single.css" />
+	<script src="scripts/jquery-1.12.0.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/data.js"></script>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="scripts/single.js"></script>
+	<script></script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<a class="navbar-brand">MANIT Results</a>
+		</div>
+	</nav>
+
+	<!-- Modal for displaying error if result of given scholar nubmer is not found -->
+	<div id="modalSchNoResp" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="alert alert-danger" role="alert">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal for displaying bar chart -->
+	<div id="modalBarChart" class="modal fade" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header"><h3 id="modalTitle" class="modal-title"></h3></div>
+				<div class="modal-body"></div>
+				<!--<div class="modal-footer">
+					<button id="btnDownloadPng" class="btn btn-info">
+						<span class="glyphicon glyphicon-download-alt"></span>
+						Download PNG
+					</button>
+				</div>-->
+			</div>
+		</div>
+	</div>
+
+	<div id="divSchNo" class="row">
+		<div class="col-lg-6">
+			<div class="input-group">
+				<input type="text" id="txtSchNo" class="form-control" maxlength="9" placeholder="Scholar number" />
+				<span class="input-group-btn">
+					<button id="btnSchNoSub" class="btn btn-default" type="button">Go!</button>
+				</span>
+			</div>
+		</div>
+	</div>
+
+	<div id="panelResult" class="panel panel-primary">
+		<div class="panel-heading">
+			<h2 class="panel-title" style="font-weight: bold;"></h2>
+		</div>
+		<div class="panel-body">
+			<div class="detailTable">
+				<div class="detailRow">
+					<div class="detailCell1">Course: </div>
+					<div id="detailCourse" class="detailCell2"></div>
+					<div class="detailCell1">Branch: </div>
+					<div id="detailBranch" class="detailCell2"></div>
+				</div>
+				<div class="detailRow">
+					<div class="detailCell1">Semester: </div>
+					<div id="detailSemester" class="detailCell2"></div>
+					<div class="detailCell1">Month-Year: </div>
+					<div id="detailMonthYear" class="detailCell2"></div>
+				</div>
+				<div class="detailRow">
+					<div class="detailCell1">SGPA: </div>
+					<div id="detailSGPA" class="detailCell2">
+						<span></span>
+					</div>
+					<div class="detailCell1">Result: </div>
+					<div id="detailResult" class="detailCell2">
+						<span></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<table class="table table-striped table-bordered">
+			<thead>
+				<tr>
+					<th style="width: 20%;">Course No</th>
+					<th style="width: 30%;">Subject Name</th>
+					<th style="width: 20%;">Grade Points</th>
+					<th style="width: 15%;">Grade</th>
+					<th style="width: 15%;">Credits Earned (Credits)</th>
+				</tr>
+			</thead>
+			<tbody id="subjectBody"></tbody>
+		</table>
+		<div class="panel-footer" style="text-align: center;">
+			<button id="btnShowChart" class="btn btn-primary">
+				Show chart
+			</button>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Class Results</title>
+	<link rel="stylesheet" href="styles/bootstrap.min.css" />
+	<link rel="stylesheet" href="styles/class.css" />
+	<script src="scripts/jquery-1.12.0.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+	<script src="scripts/data.js"></script>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="scripts/statistics.js"></script>
+	<script src="scripts/class.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<a class="navbar-brand">MANIT Results</a>
+		</div>
+	</nav>
+	<div id="divBranchSem">
+		<label for="selBranchSem" class="control-label">Select the class: </label>
+		<select id="selBranchSem" class="form-control"></select>
+	</div>
+	<div id="divClassResult" class="container-fluid">
+		<div class="container-fluid">
+			<div class="panel panel-info">
+				<div class="panel-heading">Subjects</div>
+				<div class="panel-body container-fluid">
+					<div id="divSubList" class="row"></div>
+				</div>
+			</div>
+		</div>
+		<div id="divVisualResult" class="container-fluid">
+			<div id="divResultTable"></div>
+			<div id="divResultStats"></div>
+		</div>
+	</div>
+</body>
+</html>

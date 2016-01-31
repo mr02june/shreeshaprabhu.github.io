@@ -1,0 +1,39 @@
+﻿body {
+	border-top: 5px solid blue;
+}
+
+#divBranchSem {
+	margin: 0px 70px;
+}
+
+#divClassResult {
+	margin: 30px 70px;
+}
+
+#divSubList > div {
+	margin: 5px auto;
+}
+
+.inRow {
+	margin: 10px auto;
+	font-size: medium;
+}
+
+#divResultStats .panel-heading {
+	/* font-size: larger;
+	font-weight: bolder; */
+}
+
+.divHistCont {
+	width: 100%;
+}
+
+.statProp {
+	text-align: right;
+}
+
+.tblHeaderRow {
+}
+
+.tblHeaderRow > th {
+}
