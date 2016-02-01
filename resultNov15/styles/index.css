@@ -1,0 +1,38 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+	border-top: 5px solid blue;
+	margin-bottom: 40px;
+}
+
+body > div {
+	margin: 20px 50px;
+	padding: 20px;
+}
+
+/* #divDown {
+	min-width: 360px;
+}
+
+#divLinks {
+	max-width: 640px;
+} */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 40px;
+  background-color: #f5f5f5;
+}
+
+body > footer {
+	text-align: center;
+	background-color: #eeeeee;
+	margin-top: 20px;
+	padding: 10px 0px;
+}

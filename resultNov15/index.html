@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MANIT Results: November 15</title>
+	<link rel="stylesheet" href="styles/bootstrap.min.css" />
+	<link rel="stylesheet" href="styles/index.css" />
+	<script src="scripts/jquery-1.12.0.min.js"></script>
+	<script src="scripts/bootstrap.min.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-static-top">
+		<div class="container-fluid">
+			<a class="navbar-brand">MANIT Results: November 15</a>
+		</div>
+	</nav>
+	<div>
+		<div class="row">
+			<div id="divLinks" class="container-fluid col-lg-8">
+				<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#singleResult" aria-expanded="false" aria-controls="#singleResult">
+									Individual Result
+								</a>
+							</h4>
+						</div>
+						<div id="singleResult" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								<p>
+									Result of individual student can be viewed for known Scholar Number.
+								</p>
+								<a class="btn btn-primary" href="single.html">Visit Page</a>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+							<h4 class="panel-title">
+								<a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#classResult" aria-expanded="false" aria-controls="#classResult">
+									Class Result
+								</a>
+							</h4>
+						</div>
+						<div id="classResult" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							<div class="panel-body">
+								<p>
+									Result and statistics of a whole class is presented with
+									sortable table, histogram and pie chart.
+								</p>
+								<a class="btn btn-primary" href="class.html">Visit Page</a>
+							</div>
+						</div>
+					</div>
+				</div>
+	    	</div>
+	    	<div class="col-lg-4">
+				<div id="divDown" class="panel panel-success">
+					<div class="panel-heading">
+						<h2 class="panel-title" style="font-weight: bold;">Download complete results</h2>
+					</div>
+					<div class="panel-body">
+						<p>
+							Complete result of Nov-2015 is stored in a JSON file.
+							You can download the JSON and use data for your own purpose.
+						</p>
+						<p>
+							<a href="scripts/data.pretty.json" class="btn btn-success" download="resultNov15.pretty.json">
+								<span class="glyphicon glyphicon-download-alt"></span> Pretty JSON
+							</a>
+							&nbsp;
+							<a href="scripts/data.min.json" class="btn btn-success" download="resultNov15.min.json">
+								<span class="glyphicon glyphicon-download-alt"></span> Min JSON
+							</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="container">
+			<small>
+				Last updated: 31<sup>st</sup> Jan 2016.
+				The publisher holds no responsibility over validity of data.
+			</small>
+		</div>
+	</footer>
+</body>
+</html>
