@@ -39,9 +39,11 @@ body {
 }
 
 .tblHeaderRow {
+	height: 30px;
 }
 
-.tblHeaderRow > th {
+.tblRow {
+	height: 30px;
 }
 
 .footer {

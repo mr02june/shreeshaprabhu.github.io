@@ -119,7 +119,8 @@ function onClassChange(e) {
 		"showRowNumber": true,
 		"width": "100%",
 		"cssClassNames": {
-			"headerRow": "google-visualization-table-tr-head tblHeaderRow"
+			"headerRow": "google-visualization-table-tr-head tblHeaderRow",
+			"tableRow": "tblRow"
 		}
 	};
 	table.draw(dataTable, options);
