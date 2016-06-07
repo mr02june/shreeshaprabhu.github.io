@@ -66,6 +66,7 @@ function onClassChange(e) {
 	var subMarks = [];
 	var subResult = [];
 	var classSgpa = [];
+	var classCgpa = [];
 	var classResult = [0, 0];
 
 	// dataTable for Table
@@ -73,6 +74,7 @@ function onClassChange(e) {
 	dataTable.addColumn('number', 'Scholar Number');
 	dataTable.addColumn('string', 'Name');
 	dataTable.addColumn('number', 'SGPA');
+	dataTable.addColumn('number', 'CGPA');
 	dataTable.addColumn('boolean', 'Result');
 	for (var i = 0; i < classSub[ind].length; i++) {
 		var subCode = classSub[ind][i].split(')', 1)[0].substr(1);
@@ -84,10 +86,11 @@ function onClassChange(e) {
 	for (var i = 0; i < classStdInd[ind].length; i++) {
 		var dind = classStdInd[ind][i];
 		var schNo = data[dind].sch_no;
-		var row = [{ "v": parseInt(schNo), "f": schNo }, data[dind].name, parseFloat(data[dind].sgpa),
+		var row = [{ "v": parseInt(schNo), "f": schNo }, data[dind].name, parseFloat(data[dind].sgpa), parseFloat(data[dind].cgpa),
 			data[dind].result.toUpperCase() == "PASS"];
 
 		classSgpa.push(parseFloat(data[dind].sgpa));
+		classCgpa.push(parseFloat(data[dind].cgpa));
 		classResult[(data[dind].result.toUpperCase() == 'PASS')? 1 : 0]++;
 
 		for (var j = 0; j < classSub[ind].length; j++)
@@ -103,7 +106,7 @@ function onClassChange(e) {
 					break;
 				}
 			}
-			row[sind + 4] = { "v": parseFloat(ptr), "f": ptr };
+			row[sind + 5] = { "v": parseFloat(ptr), "f": ptr };
 
 			if (parseFloat(ptr) > 0) {
 				subMarks[sind].push(parseFloat(ptr));
@@ -141,6 +144,7 @@ function onClassChange(e) {
 	$("#divClassResult").show();
 
 	addStatPanel(divResultStats, 'SGPA: Sessional Grade Point Average', classSgpa, classResult, false);
+	// addStatPanel(divResultStats, 'SGPA: Sessional Grade Point Average', classCgpa, classResult, false);
 	for (var i = 0; i < classSub[ind].length; i++) {
 		addStatPanel(divResultStats, classSub[ind][i], subMarks[i], subResult[i], false);
 	}
